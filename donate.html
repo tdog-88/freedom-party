@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donate - Freedom Party</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1f3a;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background: #d32f2f;
+      padding: 20px;
+    }
+
+    .container {
+      padding: 50px;
+    }
+
+    .card {
+      background: #13294b;
+      padding: 30px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 18px;
+      background: #d32f2f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    button:hover {
+      background: #ff5252;
+    }
+
+    a {
+      display: block;
+      margin-top: 20px;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Support the Freedom Party</h1>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>Make a Donation</h2>
+    <p>Your support helps our campaign grow.</p>
+
+    <button onclick="donate()">Donate $10</button>
+    <button onclick="donate()">Donate $25</button>
+    <button onclick="donate()">Donate $50</button>
+
+    <p id="msg"></p>
+
+    <a href="index.html">← Back to Home</a>
+  </div>
+</div>
+
+<script>
+function donate() {
+  document.getElementById("msg").innerHTML =
+    "✅ Thank you! (This is a school project demo)";
+}
+</script>
+
+</body>
+</html>
