@@ -13,7 +13,6 @@
       text-align: center;
     }
 
-    /* 🇺🇸 Side Flags */
     .flag-left, .flag-right {
       position: fixed;
       top: 0;
@@ -21,7 +20,6 @@
       height: 100%;
       background-image: url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg');
       background-size: cover;
-      background-repeat: no-repeat;
       opacity: 0.08;
       z-index: -1;
     }
@@ -32,10 +30,12 @@
     header {
       background: #d32f2f;
       padding: 20px;
+      animation: fadeDown 1s ease;
     }
 
     .container {
       padding: 50px;
+      animation: fadeUp 1.2s ease;
     }
 
     .card {
@@ -53,6 +53,13 @@
       border: none;
       border-radius: 8px;
       margin: 10px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff5252;
+      box-shadow: 0 0 12px #ff5252;
+      transform: scale(1.05);
     }
 
     a {
@@ -60,6 +67,16 @@
       margin-top: 20px;
       color: white;
       text-decoration: none;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
