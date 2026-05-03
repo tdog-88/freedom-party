@@ -20,7 +20,6 @@
       height: 100%;
       background-image: url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg');
       background-size: cover;
-      background-repeat: no-repeat;
       opacity: 0.08;
       z-index: -1;
     }
@@ -32,6 +31,7 @@
       background: #d32f2f;
       padding: 20px;
       text-align: center;
+      animation: fadeDown 1s ease;
     }
 
     nav {
@@ -55,6 +55,7 @@
       text-align: center;
       padding: 60px 20px;
       background: linear-gradient(to right, #0b1f3a, #1e3c72);
+      animation: fadeUp 1.2s ease;
     }
 
     .donate-btn {
@@ -66,12 +67,20 @@
       text-decoration: none;
       font-size: 18px;
       border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .donate-btn:hover {
+      background: #ff5252;
+      box-shadow: 0 0 15px #ff5252;
+      transform: scale(1.05);
     }
 
     section {
       padding: 40px;
       max-width: 900px;
       margin: auto;
+      animation: fadeUp 1s ease;
     }
 
     .card {
@@ -79,12 +88,29 @@
       padding: 20px;
       margin: 20px 0;
       border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
     }
 
     footer {
       text-align: center;
       padding: 20px;
       background: #111;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -108,7 +134,7 @@
 
 <div class="hero">
   <h1>Live Free</h1>
-  <p>A future specializing in the freedom for everyone.</p>
+  <p>A future built on opportunity, strength, and freedom for everyone.</p>
   <a href="./donate.html" class="donate-btn">Donate</a>
 </div>
 
@@ -122,20 +148,13 @@
 <section id="platform">
   <h2>Our Platform</h2>
 
-  <div class="card"><h3>Immigration</h3><p>Illegal Immigration is not something we want. We will try to make the immigration process easier so immigrants don’t have to go over the border!
-</p></div>
-  <div class="card"><h3>Taxes</h3><p>We want taxes to still exist, but they will be lowered. Taxes will be going mostly to the military.
-</p></div>
-  <div class="card"><h3>Education</h3><p>A strong yet purposeful education where students would learn various amounts of learning that would be helpful in their adult life. School should be later in the morning, but later in the afternoon. We will only be in school for around six months.
-</p></div>
-  <div class="card"><h3>Healthcare</h3><p>Citizens are offered various amounts of healthcare that can help people with illnesses or disabilities to the furthest and the uttermost extent with the help of medicine and future robotics. We believe that American healthcare should be either free, or extremely decreased in costs. Many Americans die every year because they couldn't afford help, we want to stop that.
-</p></div>
-  <div class="card"><h3>Environment</h3><p>Pollution needs to be watched more closely and be intervened with, so the Earth stops getting so much worse every year. Also, things like deforestation and over population that hurt our environments need to be helped with programs that allow for people to branch out without destroying forests and our planet.
-</p></div>
-  <div class="card"><h3>Economy</h3><p>The economy is extremely important for the success of a nation, so we want to have a good economy. We know that inflation is a big problem, but the minimum wage not going up with inflation is an even bigger problem. We want the minimum wage to scale with inflation, this can make our citizens more comfortable.
-</p></div>
-  <div class="card"><h3>Foreign Policy</h3><p>We want to make stronger connections with other countries and maintain peace where necessary. However, if we absolutely have to, we will use our military to protect us. This is only a last-ditch effort, and will only be used if necessary. We believe international imports, and exports should be decreased, this helps make more materials be American-made, and offers more job opportunities for Americans.
-  </p></div>
+  <div class="card"><h3>Immigration</h3><p>Make legal immigration easier while reducing illegal immigration.</p></div>
+  <div class="card"><h3>Taxes</h3><p>Lower taxes while supporting national programs.</p></div>
+  <div class="card"><h3>Education</h3><p>Flexible schedules and real-world learning opportunities.</p></div>
+  <div class="card"><h3>Healthcare</h3><p>Affordable or free healthcare for all citizens.</p></div>
+  <div class="card"><h3>Environment</h3><p>Reduce pollution and protect forests.</p></div>
+  <div class="card"><h3>Economy</h3><p>Minimum wage that keeps up with inflation.</p></div>
+  <div class="card"><h3>Foreign Policy</h3><p>Peace first, strong defense if necessary.</p></div>
 
 </section>
 
