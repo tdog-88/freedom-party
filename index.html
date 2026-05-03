@@ -12,6 +12,22 @@
       color: white;
     }
 
+    /* 🇺🇸 Side Flags */
+    .flag-left, .flag-right {
+      position: fixed;
+      top: 0;
+      width: 80px;
+      height: 100%;
+      background-image: url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.08;
+      z-index: -1;
+    }
+
+    .flag-left { left: 0; }
+    .flag-right { right: 0; }
+
     header {
       background: #d32f2f;
       padding: 20px;
@@ -41,14 +57,6 @@
       background: linear-gradient(to right, #0b1f3a, #1e3c72);
     }
 
-    .hero h1 {
-      font-size: 50px;
-    }
-
-    .hero p {
-      font-size: 20px;
-    }
-
     .donate-btn {
       display: inline-block;
       margin-top: 20px;
@@ -60,19 +68,10 @@
       border-radius: 8px;
     }
 
-    .donate-btn:hover {
-      background: #ff5252;
-    }
-
     section {
       padding: 40px;
       max-width: 900px;
       margin: auto;
-    }
-
-    h2 {
-      border-bottom: 2px solid #d32f2f;
-      padding-bottom: 10px;
     }
 
     .card {
@@ -92,6 +91,9 @@
 
 <body>
 
+<div class="flag-left"></div>
+<div class="flag-right"></div>
+
 <header>
   <img src="logo.png" style="width:120px; display:block; margin:0 auto 10px;">
   <h1>Freedom Party</h1>
@@ -107,7 +109,7 @@
 <div class="hero">
   <h1>Live Free</h1>
   <p>A future built on opportunity, strength, and freedom for everyone.</p>
-  <a href="donate.html" class="donate-btn">Donate</a>
+  <a href="./donate.html" class="donate-btn">Donate</a>
 </div>
 
 <section id="about">
