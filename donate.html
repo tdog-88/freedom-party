@@ -54,12 +54,23 @@
       border-radius: 8px;
       margin: 10px;
       transition: all 0.3s ease;
+      cursor: pointer;
     }
 
     button:hover {
       background: #ff5252;
       box-shadow: 0 0 12px #ff5252;
       transform: scale(1.05);
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      margin-top: 10px;
+      width: 150px;
+      text-align: center;
     }
 
     a {
@@ -96,9 +107,20 @@
     <h2>Make a Donation</h2>
     <p>Your support helps our campaign grow.</p>
 
-    <button onclick="donate()">Donate $10</button>
-    <button onclick="donate()">Donate $25</button>
-    <button onclick="donate()">Donate $50</button>
+    <!-- Preset Buttons -->
+    <button onclick="donate(10)">Donate $10</button>
+    <button onclick="donate(25)">Donate $25</button>
+    <button onclick="donate(50)">Donate $50</button>
+    <button onclick="donate(100)">Donate $100</button>
+    <button onclick="donate(250)">Donate $250</button>
+
+    <br><br>
+
+    <!-- Custom Amount -->
+    <h3>Custom Amount</h3>
+    <input type="number" id="customAmount" placeholder="$ Amount">
+    <br>
+    <button onclick="customDonate()">Donate Custom</button>
 
     <p id="msg"></p>
 
@@ -107,9 +129,20 @@
 </div>
 
 <script>
-function donate() {
+function donate(amount) {
   document.getElementById("msg").innerHTML =
-    "✅ Thank you! (This is unfortunately not real)";
+    "✅ Thank you for your $" + amount + " donation! (This is unfortunately not real)";
+}
+
+function customDonate() {
+  var amount = document.getElementById("customAmount").value;
+
+  if (amount === "" || amount <= 0) {
+    document.getElementById("msg").innerHTML = "⚠️ Please enter a valid amount.";
+  } else {
+    document.getElementById("msg").innerHTML =
+      "✅ Thank you for your $" + amount + " donation! (This is unfortunately not real)";
+  }
 }
 </script>
 
