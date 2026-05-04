@@ -117,8 +117,8 @@
     <br><br>
 
     <!-- Custom Amount -->
-    <h3>Custom Amount</h3>
-    <input type="number" id="customAmount" placeholder="$ Amount">
+    <h3>Custom Amount (Max $3500)</h3>
+    <input type="number" id="customAmount" placeholder="$ Amount" max="3500">
     <br>
     <button onclick="customDonate()">Donate Custom</button>
 
@@ -130,6 +130,12 @@
 
 <script>
 function donate(amount) {
+  if (amount > 3500) {
+    document.getElementById("msg").innerHTML =
+      "⚠️ Maximum donation is $3,500.";
+    return;
+  }
+
   document.getElementById("msg").innerHTML =
     "✅ Thank you for your $" + amount + " donation! (This is unfortunately not real)";
 }
@@ -139,6 +145,8 @@ function customDonate() {
 
   if (amount === "" || amount <= 0) {
     document.getElementById("msg").innerHTML = "⚠️ Please enter a valid amount.";
+  } else if (amount > 3500) {
+    document.getElementById("msg").innerHTML = "⚠️ Maximum donation is $3,500.";
   } else {
     document.getElementById("msg").innerHTML =
       "✅ Thank you for your $" + amount + " donation! (This is unfortunately not real)";
