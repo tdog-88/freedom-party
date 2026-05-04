@@ -85,13 +85,10 @@
 
     .card {
       background: #13294b;
-      padding: 20px;
       margin: 20px 0;
       border-radius: 10px;
+      overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      gap: 15px;
-      align-items: flex-start;
     }
 
     .card:hover {
@@ -99,10 +96,14 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.4);
     }
 
-    .icon {
-      width: 40px;
-      height: 40px;
-      flex-shrink: 0;
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
     }
 
     footer {
@@ -135,9 +136,7 @@
 </header>
 
 <nav>
-  <a href="#about">About</a>
   <a href="#platform">Platform</a>
-  <a href="#candidate">Candidate</a>
 </nav>
 
 <div class="hero">
@@ -146,65 +145,71 @@
   <a href="./donate.html" class="donate-btn">Donate</a>
 </div>
 
-<section id="about">
-  <h2>About Us</h2>
-  <div class="card">
-    <img class="icon" src="https://img.icons8.com/ios-filled/50/ffffff/info.png">
-    <div>
-      <p>The Freedom Party is dedicated to increasing freedom, opportunity, and quality of life for all citizens.</p>
-    </div>
-  </div>
-</section>
-
 <section id="platform">
   <h2>Our Platform</h2>
 
   <div class="card">
-    <img class="icon" src="https://img.icons8.com/ios-filled/50/ffffff/passport.png">
-    <div><h3>Immigration</h3><p>Make the immigration process easier while reducing illegal immigration.</p></div>
-  </div>
-
-  <div class="card">
-    <img class="icon" src="https://img.icons8.com/ios-filled/50/ffffff/money.png">
-    <div><h3>Taxes</h3><p>Lower taxes while supporting national programs.</p></div>
-  </div>
-
-  <div class="card">
-    <img class="icon" src="https://img.icons8.com/ios-filled/50/ffffff/school.png">
-    <div><h3>Education</h3><p>Flexible schedules and real-world learning opportunities.</p></div>
-  </div>
-
-  <div class="card">
-    <img class="icon" src="https://img.icons8.com/ios-filled/50/ffffff/health-book.png">
-    <div><h3>Healthcare</h3><p>Affordable or free healthcare for all citizens.</p></div>
-  </div>
-
-  <div class="card">
-    <img class="icon" src="https://img.icons8.com/ios-filled/50/ffffff/forest.png">
-    <div><h3>Environment</h3><p>Reduce pollution and protect forests.</p></div>
-  </div>
-
-  <div class="card">
-    <img class="icon" src="https://img.icons8.com/ios-filled/50/ffffff/economic-improvement.png">
-    <div><h3>Economy</h3><p>Minimum wage that keeps up with inflation.</p></div>
-  </div>
-
-  <div class="card">
-    <img class="icon" src="https://img.icons8.com/ios-filled/50/ffffff/globe.png">
-    <div><h3>Foreign Policy</h3><p>Peace first, strong defense if necessary.</p></div>
-  </div>
-
-</section>
-
-<section id="candidate">
-  <h2>Candidate Message</h2>
-  <div class="card">
-    <img class="icon" src="https://img.icons8.com/ios-filled/50/ffffff/megaphone.png">
-    <div>
-      <p>Hello everyone. We believe every voice matters. The Freedom Party stands for opportunity, strength, and freedom.</p>
-      <p><strong>Vote Freedom Party.</strong></p>
+    <img src="https://sourcenm.com/wp-content/uploads/2025/03/borderfence-1536x1152.jpg">
+    <div class="card-content">
+      <h3>Immigration</h3>
+      <p>Illegal Immigration is not something we want. We will try to make the immigration process easier so immigrants don’t have to go over the border. We will try to provide classes for immigrants to take, in these classes they will learn what they need to know for the citizenship test, so they will be able to get their citizenship more easily.
+</p>
     </div>
   </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818">
+    <div class="card-content">
+      <h3>Taxes</h3>
+      <p>We wish for taxes to still be a thing in our government, but lowered to around 14% to 32% in order to be fair for everyone. We will not have taxes on overtime pay, and we will reduce taxes for the elders as well.
+</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://epe.brightspotcdn.com/53/66/b17323e84e668e02e25d5b4a7a93/teacher-students-classroom.jpg">
+    <div class="card-content">
+      <h3>Education</h3>
+      <p>We want an education that is strong yet purposeful. The education will teach kids more skills that they will be able to use in their adulthood plus the ones they are already learning. There will be only four days per week and because most students do not like school, we will be changing the curriculum of it. For starters, 7th grade to 12th grade, there would be opportunities for jobs that would be beneficial for their future. Jobs that they will be interested in would make them feel less stressed and make school a better place to be at if add these things. We will also continue to provide free lunches to students.
+</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://joinepique.com/wp-content/uploads/2023/02/resize.aspx_.jpeg">
+    <div class="card-content">
+      <h3>Healthcare</h3>
+      <p>Citizens are offered various amounts of healthcare that can help people with illnesses or disabilities to the furthest and the uttermost extent with the help of medicine and future robotics. We believe that American healthcare should be either free, or extremely decreased in costs. Around 48,000 people die annually due to not being able to afford healthcare or insurance. We will lower the prices of drug store medicine and make sure elders receive better healthcare after retirement. For abortion we will leave it up to each state to decide their policies.
+</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://i0.wp.com/scampgrounds.com/wp-content/uploads/2020/09/Twin-Falls-Overlook-scaled.jpg?resize=1170%2C658&ssl=1">
+    <div class="card-content">
+      <h3>Environment</h3>
+      <p>Pollution needs to be watched more closely and be intervened with, so the Earth improves every year. Also, things like deforestation and overpopulation that hurt our environments need to be helped with programs that allow for people to branch out without destroying forests and our planet. We will try to use more sustainable and less harmful energy sources like solar panels.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://moneyandmarkets.com/wp-content/uploads/2020/03/7-factors-of-how-the-U.S.-economy-works.jpg">
+    <div class="card-content">
+      <h3>Economy</h3>
+      <p>The economy is extremely important for the success of a nation, so we want to have a good economy. We know that inflation is a big problem, but the minimum wage not going up with inflation is an even bigger problem. We want the minimum wage to scale while trying to bring inflation down, this can make our citizens more comfortable in their day to day life.
+</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://t3.ftcdn.net/jpg/07/20/28/10/360_F_720281019_9LeWwLzKDErYdb6vbnCHTT7acmARMdP5.jpg">
+    <div class="card-content">
+      <h3>Foreign Policy</h3>
+      <p>We want to make stronger connections with other countries and maintain peace where necessary. However, if we absolutely have to, we will use our military to protect us. This is only a last-ditch effort, and will only be used if necessary. We believe international imports, and exports should be decreased, this helps make more materials be American-made, and offers more job opportunities for Americans.
+</p>
+    </div>
+  </div>
+
 </section>
 
 <footer>
