@@ -130,30 +130,48 @@
 </div>
 
 <script>
+let totalDonated = 0;
+const donationLimit = 3500;
+
 function donate(amount) {
-  if (amount > 3500) {
+  if (totalDonated + amount > donationLimit) {
     document.getElementById("msg").innerHTML =
-      "⚠️ Maximum donation is $3,500.";
+      "⚠️ Donation denied. Total cannot exceed $3,500.";
     return;
   }
 
+  totalDonated += amount;
+
   document.getElementById("msg").innerHTML =
-    "✅ Thank you for your $" + amount + " donation! (This is unfortunately not real)";
+    "✅ Thank you for your $" + amount +
+    " donation! Total: $" + totalDonated +
+    " / $" + donationLimit +
+    " (This is unfortunately not real)";
 }
 
 function customDonate() {
-  var amount = document.getElementById("customAmount").value;
+  let amount = Number(document.getElementById("customAmount").value);
 
-  if (amount === "" || amount <= 0) {
-    document.getElementById("msg").innerHTML = "⚠️ Please enter a valid amount.";
-  } else if (amount > 3500) {
-    document.getElementById("msg").innerHTML = "⚠️ Maximum donation is $3,500.";
-  } else {
+  if (!amount || amount <= 0) {
     document.getElementById("msg").innerHTML =
-      "✅ Thank you for your $" + amount + " donation! (This is unfortunately not real)";
+      "⚠️ Please enter a valid amount.";
+    return;
   }
+
+  if (totalDonated + amount > donationLimit) {
+    document.getElementById("msg").innerHTML =
+      "⚠️ Donation denied. Total cannot exceed $3,500.";
+    return;
+  }
+
+  totalDonated += amount;
+
+  document.getElementById("msg").innerHTML =
+    "✅ Thank you for your $" + amount +
+    " donation! Total: $" + totalDonated +
+    " / $" + donationLimit +
+    " (This is unfortunately not real)";
 }
 </script>
-
 </body>
 </html>
